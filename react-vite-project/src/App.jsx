@@ -1,7 +1,7 @@
-
+import { Hello } from './Hello.jsx';
 function App() {
   return (
-      <h1>React with vite | ankit</h1>
+      <Hello/>
   )
 }
 
