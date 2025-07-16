@@ -8,19 +8,11 @@ function App() {
   const [counter, setCounter] = useState(0);
 
   function addValue() {
-    const increasedValue = counter + 1;
-    if(increasedValue > 20){
-      return;
-    }
-    setCounter(increasedValue);
+    setCounter((prevCounter)=>{ return prevCounter == 20 ? prevCounter: prevCounter + 1});
   }
 
   function removeValue() {
-    const decreasedValue = counter - 1;
-    if(decreasedValue < 0){
-      return;
-    }
-    setCounter(decreasedValue);
+    setCounter((prevCounter)=>{return prevCounter == 0 ? prevCounter: prevCounter - 1});
   }
 
   return (
